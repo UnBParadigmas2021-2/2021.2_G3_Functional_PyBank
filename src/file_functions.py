@@ -1,4 +1,5 @@
 def write_on_file(data, file):
+def append_on_file(data, file):
     file = open(file, "a")
     data_extracted = extract_data(data)
     new_object = parse_to_string(data_extracted)

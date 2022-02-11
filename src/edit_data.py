@@ -1,5 +1,5 @@
-from file_functions import read_from_file, write_on_file
-from utils import join, split
+from file_functions import read_from_file, append_on_file, write_on_file
+from utils import split
 
 DATABASE_FILE = "src/database/accounts.txt"
 
@@ -12,7 +12,7 @@ def create_account(type):
     phone = input("Telefone: ")
     number_account = input("Numero da Conta: ") # Para manter a função pura
     account = {"number_account": number_account, "name": name, "cpf": cpf, "phone": phone, "type": type, "balance": 0}
-    write_on_file(account, DATABASE_FILE)
+    append_on_file(account, DATABASE_FILE)
 
 def edit_client():
     cpf_client = identify_client()
