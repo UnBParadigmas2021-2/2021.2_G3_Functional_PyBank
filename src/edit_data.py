@@ -57,8 +57,6 @@ def update_client(clients, index, new_data):
 def update_clients_file(id_client, new_data): 
     clients = read_from_file(DATABASE_FILE)   
     index = search_client(clients, id_client)
-    file = open(DATABASE_FILE, "w")
     list_string = update_client(clients, index, new_data)
-    file.write(join(list_string))
-    file.close()
+    write_on_file(list_string, DATABASE_FILE)
 
