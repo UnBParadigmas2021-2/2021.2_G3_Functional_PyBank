@@ -1,4 +1,6 @@
 from edit_data import create_account, edit_client
+from deposit_to_account import deposit_to_account
+
 def main():
     while(1):
         print("############################")
@@ -20,6 +22,7 @@ def main():
         elif choice == 3:
             edit_client()
         elif choice == 4:
+            deposit_to_account()
             pass
         elif choice == 5:
             pass
