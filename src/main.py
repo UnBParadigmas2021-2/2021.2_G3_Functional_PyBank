@@ -1,4 +1,5 @@
 from edit_data import create_account, edit_client
+from show_balance import show_user_balance 
 def main():
     while(1):
         print("############################")
@@ -24,6 +25,7 @@ def main():
         elif choice == 5:
             pass
         elif choice == 6:
+            show_user_balance()
             pass
         elif choice == 0:
             exit()
