@@ -1,5 +1,6 @@
 from edit_data import create_account, edit_client
 from deposit_to_account import deposit_to_account
+from transfer_to_account import transfer_to_account
 from withdraw_from_account import withdraw_from_account
 
 
@@ -13,6 +14,7 @@ def main():
     print("4. Depositar saldo")
     print("5. Transferir saldo")
     print("6. Consultar saldo")
+    print("7. Sacar dinheiro")
     print("0. Sair")
     choice = int(input("Digite a escolha: "))
 
@@ -26,8 +28,12 @@ def main():
         deposit_to_account()
         pass
     elif choice == 5:
+        transfer_to_account()
         pass
     elif choice == 6:
+        pass
+    elif choice == 7:
+        withdraw_from_account()
         pass
     elif choice == 0:
         exit()
