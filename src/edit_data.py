@@ -40,6 +40,8 @@ def show_account_info(account):
 
 def edit_client():
     client = identify_client(input("Digite o CPF do cliente que deseja editar: "))
+    if client == None:
+        return
     print("############################")
     print("Qual dado você gostaria de alterar?")
     print("############################")
@@ -55,15 +57,16 @@ def edit_client():
                     input("Digite o novo telefone: "), client[4:6]]
     else:
         print("Opção Inválida!")
-        exit()
+        return
 
     update_clients_file(client[0], new_data)
 
 
 def identify_client(identification: callable):
     client = read_account_data(identification)
-    name, cpf = get_client_data(client, ['name', 'cpf'])
-    print(f"\tCliente {name}, CPF: {cpf}")
+    if client != None:
+        name, cpf = get_client_data(client, ['name', 'cpf'])
+        print(f"\tCliente {name}, CPF: {cpf}")
     return client
 
 
@@ -72,8 +75,10 @@ def read_account_data(id_client):
     index = search_client(clients, id_client)
     if index == -1:
         print('Cliente não cadastrado!')
-        exit()
-    return split(clients[index])
+        client = None
+    else:
+        client = split(clients[index])
+    return client
 
 
 def search_client(clients, id_client, index=0):
