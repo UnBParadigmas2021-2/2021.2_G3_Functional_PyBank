@@ -19,6 +19,8 @@ def transfer_to_account():
             f'Para quem você deseja transferir a quantia de {format_amount(amount)}:?', end='')
         target = identify_client(input("Digite o numero da conta de destino? "))
 
+        if target == None:
+            return
         update_balance(client, amount, decrease_balance)
         update_balance(target, amount, increase_balance)
     except:
