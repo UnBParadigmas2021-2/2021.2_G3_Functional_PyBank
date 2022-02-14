@@ -2,6 +2,7 @@ from edit_data import create_account, edit_client
 from deposit_to_account import deposit_to_account
 from transfer_to_account import transfer_to_account
 from withdraw_from_account import withdraw_from_account
+from show_balance import show_user_balance
 
 
 def main():
@@ -26,15 +27,12 @@ def main():
         edit_client()
     elif choice == 4:
         deposit_to_account()
-        pass
     elif choice == 5:
         transfer_to_account()
-        pass
     elif choice == 6:
-        pass
+        show_user_balance()
     elif choice == 7:
         withdraw_from_account()
-        pass
     elif choice == 0:
         exit()
     else:
