@@ -22,7 +22,20 @@ def create_account(type):
     account_number = input("Numero da Conta: ")  # Para manter a função pura
     account = {"account_number": account_number, "name": name,
                "cpf": cpf, "phone": phone, "type": type, "balance": 0}
-    append_on_file(account, DATABASE_FILE)
+    try:
+        append_on_file(account, DATABASE_FILE)
+        show_account_info(account)
+    except:
+        print("\nNão foi Ppossível criar a conta!")
+
+
+def show_account_info(account):
+    print("\n**Conta criada com sucesso!**")
+    print(f"Conta {account['type']}")
+    print(f"Número da conta: {account['account_number']}")
+    print(f"Proprietario: {account['name']}")
+    print(f"Cpf: {account['cpf']}")
+    print(f"Phone: {account['phone']}\n")
 
 
 def edit_client():
