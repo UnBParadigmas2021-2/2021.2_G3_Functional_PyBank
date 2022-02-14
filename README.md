@@ -38,9 +38,19 @@ Nossa integrante Ana Carolina decidiu prontamente organizar esse pedido do geren
 | RF008 | Editar Usuário      | Alterar dados do cadastro. Não sendo possível alterar o código da conta                                                                                                     |
 | RF009 | Consultar saldo     | Exibir saldo atual do usuário, se for poupança deve seguir a regra já definida                                                                                              |
 
-## Screenshots
+## Screenshots 
 
-Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
+Menu principal da aplicação 
+
+![Menu principal](/Media/img1.jpeg) 
+
+Funcionalidade de alterar dados do usuário 
+
+![Alterar dados do usuário](/Media/img2.jpeg) 
+
+Lista das informações do usuário salvas em um arquivo .txt 
+
+![Forma como os dados são guardados](/Media/img3.jpeg)
 
 ## Instalação
 
