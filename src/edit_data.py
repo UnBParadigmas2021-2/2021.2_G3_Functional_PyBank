@@ -26,16 +26,16 @@ def create_account(type):
         append_on_file(account, DATABASE_FILE)
         show_account_info(account)
     except:
-        print("\nNão foi Ppossível criar a conta!")
+        print("\nNão foi possível criar a conta!")
 
 
 def show_account_info(account):
     print("\n**Conta criada com sucesso!**")
     print(f"Conta {account['type']}")
     print(f"Número da conta: {account['account_number']}")
-    print(f"Proprietario: {account['name']}")
-    print(f"Cpf: {account['cpf']}")
-    print(f"Phone: {account['phone']}\n")
+    print(f"Proprietário: {account['name']}")
+    print(f"CPF: {account['cpf']}")
+    print(f"Telefone: {account['phone']}\n")
 
 
 def edit_client():
