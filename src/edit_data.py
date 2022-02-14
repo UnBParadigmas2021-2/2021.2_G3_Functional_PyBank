@@ -36,11 +36,10 @@ def edit_client():
     option = int(input("Escolha uma opção: "))
 
     if option == 1:
-        new_name = input("Digite o novo nome: ")
-        new_data = [client[0], new_name, *client[2:6]]
+        new_data = [client[0], input("Digite o novo nome: "), *client[2:6]]
     elif option == 2:
-        new_phone = input("Digite o novo telefone: ")
-        new_data = [*client[0:3], new_phone, client[4:6]]
+        new_data = [*client[0:3],
+                    input("Digite o novo telefone: "), client[4:6]]
     else:
         print("Opção Inválida!")
         exit()
@@ -49,8 +48,7 @@ def edit_client():
 
 
 def identify_client():
-    client_id = input("Digite o CPF do Cliente: ")
-    client = read_account_data(client_id)
+    client = read_account_data(input("Digite o CPF do Cliente: "))
     name, cpf = get_client_data(client, ['name', 'cpf'])
     print(f"\tCliente {name}, CPF: {cpf}")
     return client
