@@ -1,22 +1,21 @@
 from edit_data import identify_client, update_clients_file, get_client_data
+from operations import amount_input, increase_balance, update_balance
+from utils import format_amount
 
 
 def get_deposit_amount():
-    amount = int(input('Por favor, digite o valor que deseja depositar: '))
-    if(amount <= 0):
-        print('Valor Inválido, transação cancelada!')
-        exit()
-    return amount
+    return input('Por favor, digite o valor que deseja depositar: R$')
 
 
 def deposit_to_account():
-    client = identify_client()
-    balance, account_number = get_client_data(
-        client, ['balance', 'account_number'])
-    print(f"\tSaldo atual:  {balance}")
-
-    updated_client_balance = int(balance) + get_deposit_amount()
-    updated_client = [*client[0:5], updated_client_balance]
-    update_clients_file(account_number, updated_client)
-
-    print("\nSeu deposito foi efetuado com sucesso!\n")
+    try:
+        client = identify_client()
+        balance, account_number = get_client_data(
+            client, ['balance', 'account_number'])
+        print(f"\tSaldo atual: {format_amount(balance)}")
+        update_balance(client, amount_input(
+            get_deposit_amount), increase_balance)
+    except:
+        print(f'Operação cancelada.')
+    else:
+        print("\nSeu deposito foi efetuado com sucesso!\n")
