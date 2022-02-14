@@ -21,3 +21,15 @@ def decrease_balance(balance, amount: float):
     if (balance < amount):
         raise ValueError('Saldo insuficiente! ')
     return float(balance) - float(amount)
+
+
+def amount_input(input: callable):
+    try:
+        amount = input()
+        if(amount <= 0):
+            print('Valor Inválido! Insira um valor positivo.')
+            return amount_input(input)
+        return amount
+    except ValueError:
+        print('Valor Inválido! Insira um valor numérico.')
+        return amount_input(input)
