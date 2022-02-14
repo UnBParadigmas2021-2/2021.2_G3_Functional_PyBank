@@ -1,51 +1,72 @@
-# RepositorioTemplate
-Esse repositório é para ser utilizado pelos grupos como um template inicial, da home page do Projeto.
-
-**!! *Atenção: Renomeie o seu repositório para (Ano.Semestre)_(Grupo)_(Paradigma)_(NomeDoProjeto)*. !!** 
-
-Paradigmas:
- - Funcional
- - Logico
- - SMA
-
-**!! *Não coloque os nomes dos alunos no título do repositório*. !!**
-
-**!! *Exemplo de título correto: 2021.2_G1_Logico_ProjetoRoteirosAereos*. !!**
- 
- (Apague essa seção)
-
-# NomeDoProjeto
+# PyBank
 
 **Disciplina**: FGA0210 - PARADIGMAS DE PROGRAMAÇÃO - T01 <br>
-**Nro do Grupo**: XX<br>
-**Paradigma**: XXXXXXXXXX<br>
+**Nro do Grupo**: 03<br>
+**Paradigma**: Funcional<br>
 
 ## Alunos
-|Matrícula | Aluno |
-| -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
 
-## Sobre 
-Descreva o seu projeto em linhas gerais. 
+| Matrícula  | Aluno                           |
+| ---------- | ------------------------------- |
+| 19/0063441 | Ana Carolina Carvalho da Silva  |
+| 18/0113151 | Eduardo Nunes Picolo            |
+| 18/0113861 | Kleidson Alves Corrêa           |
+| 18/0125770 | Lucas Gabriel Bezerra           |
+| 18/0114077 | Lucas Rodrigues Fonseca         |
+| 18/0106970 | Matheus Gabriel Alves Rodrigues |
+| 18/0129058 | Paulo Victor da Silva           |
+| 18/0129287 | Pedro Henrique Vieira Lima      |
+| 18/0130722 | Samuel Nogueira                 |
+
+## Sobre
+
+Após sofrer muito tempo com planilhas e anotações de caderno tentando manter a ordem de todas as contas no banco, o gerente do PyBank solicitou ao time de desenvolvimento que criasse uma solução que permitisse que ele tivesse todo o controle necessário para que conseguisse ajudar os clientes sem ter o risco de perder algum detalhe ou de cometer algum erro. Achando que isso não seria desafio suficiente para o time de desenvolvimento do PyBank, ele decidiu exigir que o time usasse o Paradigma Funcional na solução, após ter visto no jornal que isso era a nova tendência em soluções de organizações financeiras.
+
+## Requisitos
+
+Nossa integrante Ana Carolina decidiu prontamente organizar esse pedido do gerente e elaborou a seguinte lista de requisitos para guiar o time de desenvolvimento durante esse desafio.
+
+| ID    | Requisito           | Descrição                                                                                                                                                                   |
+| ----- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| RF001 | Cadastro de usuário | Cadastro simples de usuário                                                                                                                                                 |
+| RF002 | Criação de conta    | A conta deve ter um código identificador e estar associado a um usuário. Um mesmo código não pode estar associado a 2 usuários                                              |
+| RF003 | Conta corrente      | Tipo de conta padrão do usuário                                                                                                                                             |
+| RF004 | Conta poupança      | Neste tipo de conta, toda vez que o usuário optar por consultar o saldo, o valor deve ser multiplicado por 0,01 (fazendo uma referencia fictícia do rendimento da poupança) |
+| RF005 | Depositar saldo     | Fazer acrescimo de valor no saldo atual                                                                                                                                     |
+| RF006 | Sacar saldo         | Fazer retirada do saldo sem transferir para outra conta. Caso não exista saldo suficiente, retornar mensagem de erro                                                        |
+| RF007 | Transferir saldo    | Validar se conta destino existe e realizar a transferência, senão retornar aviso                                                                                            |
+| RF008 | Editar Usuário      | Alterar dados do cadastro. Não sendo possível alterar o código da conta                                                                                                     |
+| RF009 | Consultar saldo     | Exibir saldo atual do usuário, se for poupança deve seguir a regra já definida                                                                                              |
 
 ## Screenshots
+
 Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
 
-## Instalação 
-**Linguagens**: xxxxxx<br>
-**Tecnologias**: xxxxxx<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
-Insira um manual ou um script para auxiliar ainda mais.
+## Instalação
 
-## Uso 
-Explique como usar seu projeto, caso haja algum passo a passo após o comando de execução.
+**Linguagens**: Python<br>
+**Tecnologias**: -<br>
+**Passo a Passo da instalação**:
+
+1. Acesse o [site oficial do Python](https://www.python.org/downloads/) e baixe o instalador para seu sistema operacional.
+2. Caso esteja no Windows, não se esqueça de marcar a opção para adicionar o Python ao PATH.
+3. Após instalar o Python, acesse a pasta src deste repositório através do terminal.
+4. Execute a aplicação através do comando:
+
+```python
+  python3 main.py
+```
+
+## Uso
+
+Basta utilizar seu teclado para interagir com a aplicação e seguir as instruções apresentadas em tela.
 
 ## Vídeo
+
 Adicione 1 ou mais vídeos com a execução do projeto.
 
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas a seguir.
+<!-- ## Outros
+Quaisquer outras informações sobre seu projeto podem ser descritas a seguir. -->
 
-## Fontes
-Caso utilize materiais de terceiros, referencie-os adequadamente.
+<!-- ## Fontes
+Caso utilize materiais de terceiros, referencie-os adequadamente. -->
