@@ -25,11 +25,7 @@ def decrease_balance(balance, amount: float):
 
 def amount_input(input: callable):
     try:
-        amount = input()
-        if(amount <= 0):
-            print('Valor Inválido! Insira um valor positivo.')
-            return amount_input(input)
-        return amount
+        return input()
     except ValueError:
         print('Valor Inválido! Insira um valor numérico.')
         return amount_input(input)

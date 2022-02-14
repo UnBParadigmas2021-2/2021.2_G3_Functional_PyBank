@@ -15,7 +15,7 @@ def get_withdraw_amount(current_balance):
 
 def withdraw_from_account():
     try:
-        client = identify_client()
+        client = identify_client(input("Digite aqui o número da conta que deseja sacar: "))
         balance, account_number = get_client_data(
             client, ['balance', 'account_number'])
         print(f"\tSaldo atual: {format_amount(balance)}")

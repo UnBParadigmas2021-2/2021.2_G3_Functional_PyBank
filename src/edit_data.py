@@ -26,7 +26,7 @@ def create_account(type):
 
 
 def edit_client():
-    client = identify_client()
+    client = identify_client(input("Digite o CPF do cliente que deseja editar: "))
     print("############################")
     print("Qual dado você gostaria de alterar?")
     print("############################")
@@ -47,8 +47,8 @@ def edit_client():
     update_clients_file(client[0], new_data)
 
 
-def identify_client():
-    client = read_account_data(input("Digite o CPF do Cliente: "))
+def identify_client(identification: callable):
+    client = read_account_data(identification)
     name, cpf = get_client_data(client, ['name', 'cpf'])
     print(f"\tCliente {name}, CPF: {cpf}")
     return client
@@ -82,6 +82,6 @@ def update_clients_file(id_client, new_data):
     write_on_file(list_string, DATABASE_FILE)
 
 
-def get_client_data(client, fields: list[str]):
+def get_client_data(client, fields):
     client_fields = map(lambda x: client[CLIENT_FIELDS_MAP[x]], fields)
     return client_fields

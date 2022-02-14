@@ -6,7 +6,7 @@ from withdraw_from_account import get_withdraw_amount
 
 def transfer_to_account():
     try:
-        client = identify_client()
+        client = identify_client(input("Digite o numero da conta de origem? "))
 
         balance, account_number = get_client_data(
             client, ['balance', 'account_number'])
@@ -17,7 +17,7 @@ def transfer_to_account():
 
         print(
             f'Para quem você deseja transferir a quantia de {format_amount(amount)}:?', end='')
-        target = identify_client()
+        target = identify_client(input("Digite o numero da conta de destino? "))
 
         update_balance(client, amount, decrease_balance)
         update_balance(target, amount, increase_balance)
