@@ -64,11 +64,11 @@ Lista das informações do usuário salvas em um arquivo .txt
 
 1. Acesse o [site oficial do Python](https://www.python.org/downloads/) e baixe o instalador para seu sistema operacional.
 2. Caso esteja no Windows, não se esqueça de marcar a opção para adicionar o Python ao PATH.
-3. Após instalar o Python, acesse a pasta src deste repositório através do terminal.
+3. Após instalar o Python, acesse a pasta raiz deste repositório através do terminal.
 4. Execute a aplicação através do comando:
 
 ```python
-  python3 main.py
+  python3 src/main.py
 ```
 
 ## Uso
