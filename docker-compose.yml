@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  pybank:
+    build:
+      dockerfile: docker/Dockerfile
+      context: .
+    volumes:
+      - ./:/home/
+
