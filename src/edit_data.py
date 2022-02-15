@@ -22,11 +22,26 @@ def create_account(type):
     account_number = input("Numero da Conta: ")  # Para manter a função pura
     account = {"account_number": account_number, "name": name,
                "cpf": cpf, "phone": phone, "type": type, "balance": 0}
-    append_on_file(account, DATABASE_FILE)
+    try:
+        append_on_file(account, DATABASE_FILE)
+        show_account_info(account)
+    except:
+        print("\nNão foi possível criar a conta!")
+
+
+def show_account_info(account):
+    print("\n**Conta criada com sucesso!**")
+    print(f"Conta {account['type']}")
+    print(f"Número da conta: {account['account_number']}")
+    print(f"Proprietário: {account['name']}")
+    print(f"CPF: {account['cpf']}")
+    print(f"Telefone: {account['phone']}\n")
 
 
 def edit_client():
     client = identify_client(input("Digite o CPF do cliente que deseja editar: "))
+    if client == None:
+        return
     print("############################")
     print("Qual dado você gostaria de alterar?")
     print("############################")
@@ -42,15 +57,16 @@ def edit_client():
                     input("Digite o novo telefone: "), client[4:6]]
     else:
         print("Opção Inválida!")
-        exit()
+        return
 
     update_clients_file(client[0], new_data)
 
 
 def identify_client(identification: callable):
     client = read_account_data(identification)
-    name, cpf = get_client_data(client, ['name', 'cpf'])
-    print(f"\tCliente {name}, CPF: {cpf}")
+    if client != None:
+        name, cpf = get_client_data(client, ['name', 'cpf'])
+        print(f"\tCliente {name}, CPF: {cpf}")
     return client
 
 
@@ -59,8 +75,10 @@ def read_account_data(id_client):
     index = search_client(clients, id_client)
     if index == -1:
         print('Cliente não cadastrado!')
-        exit()
-    return split(clients[index])
+        client = None
+    else:
+        client = split(clients[index])
+    return client
 
 
 def search_client(clients, id_client, index=0):

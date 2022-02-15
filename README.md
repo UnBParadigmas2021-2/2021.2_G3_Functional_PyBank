@@ -38,9 +38,23 @@ Nossa integrante Ana Carolina decidiu prontamente organizar esse pedido do geren
 | RF008 | Editar Usuário      | Alterar dados do cadastro. Não sendo possível alterar o código da conta                                                                                                     |
 | RF009 | Consultar saldo     | Exibir saldo atual do usuário, se for poupança deve seguir a regra já definida                                                                                              |
 
-## Screenshots
 
-Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
+Planilha de referência usada para organizar os requisitos <iframe width="200%" height="600" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQiLF5V4S0vZTmM2tC9cFMyr8XI6C7crnm6RMU2CyWswSRvGi-k531DtA6IqH5d0YiZ_Z6cxooXpOjy/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe> 
+
+
+## Screenshots 
+
+Menu principal da aplicação 
+
+![Menu principal](/Media/img1.jpeg) 
+
+Funcionalidade de alterar dados do usuário 
+
+![Alterar dados do usuário](/Media/img2.jpeg) 
+
+Lista das informações do usuário salvas em um arquivo .txt 
+
+![Forma como os dados são guardados](/Media/img3.jpeg)
 
 ## Instalação
 
@@ -50,11 +64,11 @@ Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcioname
 
 1. Acesse o [site oficial do Python](https://www.python.org/downloads/) e baixe o instalador para seu sistema operacional.
 2. Caso esteja no Windows, não se esqueça de marcar a opção para adicionar o Python ao PATH.
-3. Após instalar o Python, acesse a pasta src deste repositório através do terminal.
+3. Após instalar o Python, acesse a pasta raiz deste repositório através do terminal.
 4. Execute a aplicação através do comando:
 
 ```python
-  python3 main.py
+  python3 src/main.py
 ```
 
 ## Uso
@@ -63,7 +77,8 @@ Basta utilizar seu teclado para interagir com a aplicação e seguir as instruç
 
 ## Vídeo
 
-Adicione 1 ou mais vídeos com a execução do projeto.
+[![PyBank](https://img.youtube.com/vi/7xEJkpA0iyo/0.jpg)](https://www.youtube.com/watch?v=7xEJkpA0iyo)
+[Link](https://www.youtube.com/watch?v=7xEJkpA0iyo)
 
 <!-- ## Outros
 Quaisquer outras informações sobre seu projeto podem ser descritas a seguir. -->

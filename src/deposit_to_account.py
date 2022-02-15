@@ -4,7 +4,7 @@ from utils import format_amount
 
 
 def get_deposit_amount():
-    amount =  int(input('Por favor, digite o valor que deseja depositar: R$'))
+    amount = float(input('Por favor, digite o valor que deseja depositar: R$'))
     if(amount <= 0):
         print('Valor Inválido! Insira um valor positivo.')
         return get_deposit_amount()
