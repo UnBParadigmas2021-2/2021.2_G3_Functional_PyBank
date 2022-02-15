@@ -71,6 +71,10 @@ Lista das informações do usuário salvas em um arquivo .txt
   python3 src/main.py
 ```
 
+ou usando o docker-compose com o comando:
+
+`docker-compose run pybank`
+
 ## Uso
 
 Basta utilizar seu teclado para interagir com a aplicação e seguir as instruções apresentadas em tela.
